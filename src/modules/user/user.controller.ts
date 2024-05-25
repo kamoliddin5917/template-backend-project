@@ -11,15 +11,9 @@ import {
 import { IUserService } from './interfaces/user.service';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { CreateUserDto } from './dto/create-user.dto';
-import {
-  JshshirAlreadyUsedException,
-  LoginAlreadyUsedException,
-  OneIdAlreadyUsedException,
-} from './exception/user.exception';
+import { LoginAlreadyUsedException } from './exception/user.exception';
 import { RolesGuard } from '../shared/guards/role.guard';
 import { JwtAuthGuard } from '../shared/guards/auth/jwt-auth.guard';
-import { RoleDecorator } from '../auth/decorator/role.decorator';
-import { RoleEnum } from 'src/common/enums/enum';
 import { CurrentUser } from 'src/common/decorator/user.decorator';
 import { ICurrentUser } from 'src/common/types/type';
 
@@ -42,23 +36,6 @@ export class UserController {
 
       if (getByLogin) {
         throw new LoginAlreadyUsedException();
-      }
-    }
-    if (createUserDto.jshshir) {
-      const { data: getByJshshir } = await this.userService.findOneByJshshir(
-        createUserDto.jshshir,
-      );
-
-      if (getByJshshir) {
-        throw new JshshirAlreadyUsedException();
-      }
-    }
-    if (createUserDto.oneIdLogin) {
-      const { data: getByOneIdLogin } =
-        await this.userService.findOneByOneIdLogin(createUserDto.oneIdLogin);
-
-      if (getByOneIdLogin) {
-        throw new OneIdAlreadyUsedException();
       }
     }
 

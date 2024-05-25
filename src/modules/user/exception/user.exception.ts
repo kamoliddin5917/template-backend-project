@@ -9,21 +9,3 @@ export class LoginAlreadyUsedException extends HttpException {
     );
   }
 }
-
-export class OneIdAlreadyUsedException extends HttpException {
-  constructor() {
-    super(
-      JSON.stringify(getPrompt('application', 'one_id_already_used')),
-      HttpStatus.BAD_REQUEST,
-    );
-  }
-}
-
-export class JshshirAlreadyUsedException extends HttpException {
-  constructor() {
-    super(
-      JSON.stringify(getPrompt('application', 'jshshir_already_used')),
-      HttpStatus.BAD_REQUEST,
-    );
-  }
-}
