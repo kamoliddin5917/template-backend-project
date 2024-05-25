@@ -18,19 +18,6 @@ export class UserService
     super(userRepository, 'user');
   }
 
-  async findOneByJshshir(jshshir: string): Promise<ResData<UserEntity | null>> {
-    const foundData = await this.userRepository.findOne({ where: { jshshir } });
-
-    const resData = new ResData<UserEntity>('found', 200, foundData);
-
-    if (!foundData) {
-      resData.message = 'user not found by jshshir';
-      resData.statusCode = 404;
-    }
-
-    return resData;
-  }
-
   async findOneByLogin(login: string): Promise<ResData<UserEntity | null>> {
     const foundData = await this.userRepository.findOne({ where: { login } });
 
@@ -38,23 +25,6 @@ export class UserService
 
     if (!foundData) {
       resData.message = 'user not found by login';
-      resData.statusCode = 404;
-    }
-
-    return resData;
-  }
-
-  async findOneByOneIdLogin(
-    oneIdLogin: string,
-  ): Promise<ResData<UserEntity | null>> {
-    const foundData = await this.userRepository.findOne({
-      where: { oneIdLogin },
-    });
-
-    const resData = new ResData<UserEntity>('found', 200, foundData);
-
-    if (!foundData) {
-      resData.message = 'user not found by oneIdLogin';
       resData.statusCode = 404;
     }
 

@@ -16,7 +16,5 @@ export interface IUserService {
     dto: CreateUserDto,
     currentUser?: ICurrentUser,
   ): Promise<ResData<UserEntity>>;
-  findOneByJshshir(jshshir: string): Promise<ResData<UserEntity | null>>;
   findOneByLogin(login: string): Promise<ResData<UserEntity | null>>;
-  findOneByOneIdLogin(oneIdLogin: string): Promise<ResData<UserEntity | null>>;
 }

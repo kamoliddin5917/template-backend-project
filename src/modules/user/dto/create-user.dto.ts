@@ -37,11 +37,6 @@ export class CreateUserDto {
   @IsOptional()
   middlename: Nullable<string>;
 
-  @ApiPropertyOptional({ type: String, example: '123456789' })
-  @IsString()
-  @IsOptional()
-  jshshir: Nullable<string>;
-
   @ApiPropertyOptional({
     type: String,
     example: 'https://railway.uz/upload/test.jpg',
@@ -50,11 +45,6 @@ export class CreateUserDto {
   @IsOptional()
   avatar: Nullable<string>;
 
-  @ApiPropertyOptional({ type: String, example: '123456789' })
-  @IsString()
-  @IsOptional()
-  oneIdLogin: Nullable<string>;
-
   @ApiPropertyOptional({ enum: [RoleEnum], example: [RoleEnum.SUPER_ADMIN] })
   @IsArray()
   @Type(() => String)
@@ -62,11 +52,6 @@ export class CreateUserDto {
   @ArrayMinSize(1)
   @IsNotEmpty()
   roles: Array<RoleEnum>;
-
-  @ApiProperty({ type: Boolean, example: true })
-  @IsBoolean()
-  @IsNotEmpty()
-  isVerified: boolean;
 
   @ApiProperty({ type: Boolean, example: true })
   @IsBoolean()
