@@ -47,7 +47,7 @@ async function bootstrap() {
   );
 
   const options = new DocumentBuilder()
-    .setTitle('Japanese')
+    .setTitle('Template')
     .setDescription('this is v1')
     .setVersion('1.0.0')
     .addTag('Your API Tag ok')

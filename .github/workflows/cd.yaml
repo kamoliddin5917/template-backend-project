@@ -19,9 +19,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          # cd /var/www/map.railwayinfra.uz/backend/
+          # cd /app/template/
           # git pull origin main
           # npm i
           # npm run migration:run
           # npm run build
-          # pm2 restart 16
+          # pm2 restart 7
