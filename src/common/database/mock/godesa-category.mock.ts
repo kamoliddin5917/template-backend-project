@@ -1,0 +1,51 @@
+export const godesaMock = [
+  {
+    code: '10',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+  {
+    code: '20',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+  {
+    code: '30',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+  {
+    code: '40',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+  {
+    code: '50',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+  {
+    code: '60',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+  {
+    code: '70',
+    UZ: 'uz',
+    EN: 'en',
+    RU: 'ru',
+    KRIL: 'kril',
+  },
+];
